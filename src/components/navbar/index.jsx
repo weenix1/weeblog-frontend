@@ -3,6 +3,7 @@ import { Container, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./styles.css";
+
 export default class NavBar extends Component {
   render() {
     return (
