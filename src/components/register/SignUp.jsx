@@ -1,6 +1,6 @@
 import { Form, Button, Container, Card } from "react-bootstrap";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./signUp.css";
 
 const SignUp = () => {
@@ -8,6 +8,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [surName, setSurName] = useState("");
+  const [data, setData] = useState({});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
