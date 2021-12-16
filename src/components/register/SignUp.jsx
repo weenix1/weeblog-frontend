@@ -22,6 +22,7 @@ const SignUp = () => {
       if (response.ok) {
         let data = await response.json();
         localStorage.setItem("accessToken", data.accessToken);
+        localStorage.setItem("refreshToken", data.refreshToken);
         console.log("here is the user info", data);
       }
     } catch (error) {
@@ -68,10 +69,14 @@ const SignUp = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+              <a href="http://localhost:3002/users/googleLogin">
+                <Button>Login with Google</Button>
+              </a>
+            </div>
           </Form>
         </Card>
       </div>
